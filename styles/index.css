@@ -1,0 +1,93 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+header { 
+    width: 100%; 
+    height: 10vh;
+    background-color: #1C1B1F;
+    color: #E7E0EC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+button {
+    margin: 1vh;
+    width: 50vw;
+    max-width: 200px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none ;
+    padding: 15px 32px;
+    border-radius: 10px;
+    font-size: 20px;
+    background-color: rgb(61, 201, 61);
+    color: white;
+
+}
+button:active, button:hover {
+    background-color: #381E72;
+    color: white;
+}
+
+section{
+    width: 50%;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+/*radio*/
+/* Labels for checked inputs */
+input:checked + label {
+    color: red;
+  }
+  
+/* Radio element, when checked */
+input[type="radio"] {
+    display: none;
+}
+input[type="radio"] + label {
+    display: inline-block;
+    padding: 8px 10px;
+    border: 1px solid #dfdfdf;
+    background-color: #ffffff;
+    text-align: center;
+    cursor: pointer;
+}
+
+input[type="radio"]:checked + label {
+    background-color: #113a6b;
+    color: #ffffff;
+}
+
+fieldset {
+    width: 60%; 
+    padding: 2vw 2vw;
+    font-size: 2vw;
+    border: 1px solid #dfdfdf;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
