@@ -1,93 +1,29 @@
-* {
-    margin: 0px;
-    padding: 0px;
-}
-
-header { 
-    width: 100%; 
-    height: 10vh;
-    background-color: #1C1B1F;
-    color: #E7E0EC;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-main {
-    width: 100%;
-    height: 90vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+const showDice = () => {
+    const n = Math.floor(Math.random() * 6)+1
+    const s1 = document.querySelector("#s1")
     
+
+    s1.innerHTML = `<img src="./images/${n}.png" />`
+
+    console.log(n);
 }
 
-button {
-    margin: 1vh;
-    width: 50vw;
-    max-width: 200px;
-    border: none;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none ;
-    padding: 15px 32px;
-    border-radius: 10px;
-    font-size: 20px;
-    background-color: rgb(61, 201, 61);
-    color: white;
+//요소 보이기 함수
+const show = (dspS1,dspS2,dspS3,dspBt1,dspBt2) => {
+    const s1 = document.querySelector("#s1");
+    const s2 = document.querySelector("#s2");
+    const s3 = document.querySelector("#s3");
+    const bt1 = document.querySelector("#bt1");
+    const bt2 = document.querySelector("#bt2");
 
-}
-button:active, button:hover {
-    background-color: #381E72;
-    color: white;
+    s1.style.display = dspS1 ;
+    s2.style.display = dspS2 ;
+    s3.style.display = dspS3 ;
+    bt1.style.display = dspBt1 ;
+    bt2.style.display = dspBt2 ;
 }
 
-section{
-    width: 50%;
-    height: 30vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-}
-
-/*radio*/
-/* Labels for checked inputs */
-input:checked + label {
-    color: red;
-  }
-  
-/* Radio element, when checked */
-input[type="radio"] {
-    display: none;
-}
-input[type="radio"] + label {
-    display: inline-block;
-    padding: 8px 10px;
-    border: 1px solid #dfdfdf;
-    background-color: #ffffff;
-    text-align: center;
-    cursor: pointer;
-}
-
-input[type="radio"]:checked + label {
-    background-color: #113a6b;
-    color: #ffffff;
-}
-
-fieldset {
-    width: 60%; 
-    padding: 2vw 2vw;
-    font-size: 2vw;
-    border: 1px solid #dfdfdf;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-form{
-    justify-content: center;
-    display: flex;
-    align-items: center;
-}
+//DOM이 로드 된 후
+document.addEventListener("DOMContentLoaded", ()=>{
+   show("none", "block", "none", "block", "none")
+});
