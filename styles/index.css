@@ -91,3 +91,10 @@ form{
     display: flex;
     align-items: center;
 }
+
+#s1, #s3{
+   text-align: center;
+   height: auto;
+   
+    
+}
